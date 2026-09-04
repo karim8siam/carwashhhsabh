@@ -1,0 +1,278 @@
+/* DAYLAN FRANK CAR WASHING - LUXURY AUTOMOTIVE STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-navy: #070d1e;
+  --secondary-navy: #0d1b3e;
+  --accent-gold: #ffb703;
+  --accent-gold-hover: #e0a100;
+  --electric-blue: #0284c7;
+  --electric-blue-light: #38bdf8;
+  --card-bg: rgba(13, 27, 62, 0.7);
+  --card-border: rgba(255, 183, 3, 0.2);
+  --glow-gold: rgba(255, 183, 3, 0.35);
+  --glow-blue: rgba(56, 189, 248, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--primary-navy);
+  color: #f8fafc;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.font-heading {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Background Gradients & Mesh */
+.bg-hero-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 15%, rgba(2, 132, 199, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(255, 183, 3, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(13, 27, 62, 0.88) 0%, #070d1e 100%),
+    url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+@media (min-width: 1024px) {
+  .bg-hero-pattern {
+    background-attachment: fixed;
+  }
+}
+
+.bg-mesh-dark {
+  background-image: 
+    radial-gradient(circle at 10% 30%, rgba(255, 183, 3, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 90% 70%, rgba(2, 132, 199, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #070d1e 0%, #0a142c 50%, #070d1e 100%);
+}
+
+.glass-card {
+  background: rgba(13, 27, 62, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 183, 3, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(255, 183, 3, 0.15), 0 0 20px rgba(2, 132, 199, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .glass-card:hover {
+    transform: none;
+  }
+}
+
+.gold-border-glow {
+  border: 2px solid #ffb703;
+  box-shadow: 0 0 25px rgba(255, 183, 3, 0.35), inset 0 0 15px rgba(255, 183, 3, 0.1);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF6D6 0%, #FFB703 50%, #FFA000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-gradient-text {
+  background: linear-gradient(135deg, #BAE6FD 0%, #38BDF8 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-gold {
+  background: linear-gradient(135deg, #FFB703 0%, #F59E0B 100%);
+  color: #070d1e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-blue {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Button Styling */
+.btn-gold {
+  background: linear-gradient(135deg, #FFB703 0%, #F59E0B 100%);
+  color: #070d1e;
+  font-weight: 700;
+  box-shadow: 0 8px 25px -4px rgba(255, 183, 3, 0.5);
+  transition: all 0.25s ease;
+  touch-action: manipulation;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%);
+  box-shadow: 0 12px 30px -2px rgba(255, 183, 3, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 8px 25px -4px rgba(37, 211, 102, 0.5);
+  transition: all 0.25s ease;
+  touch-action: manipulation;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #2ef377 0%, #17a091 100%);
+  box-shadow: 0 12px 32px -2px rgba(37, 211, 102, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Pulse animation for floating WhatsApp */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-whatsapp {
+  animation: pulse-ring 2.2s infinite;
+}
+
+/* Before & After Interactive Slider */
+.ba-slider-container {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .ba-slider-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ba-slider-container {
+    height: 240px;
+  }
+}
+
+.ba-slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.ba-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  border-right: 3px solid #ffb703;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background: #ffb703;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #070d1e;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8), 0 0 12px #ffb703;
+  z-index: 10;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+@media (max-width: 480px) {
+  .ba-handle {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+  }
+}
+
+/* Custom Checkbox Pill */
+.addon-pill {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.addon-pill.active {
+  background: rgba(255, 183, 3, 0.15);
+  border-color: #ffb703;
+  color: #ffffff;
+}
+
+/* Car Switcher Tabs */
+.car-tab-btn.active {
+  background: linear-gradient(135deg, #ffb703 0%, #f59e0b 100%);
+  color: #070d1e;
+  font-weight: 800;
+  box-shadow: 0 4px 20px rgba(255, 183, 3, 0.4);
+}
+
+.car-tab-btn:not(.active) {
+  background: rgba(13, 27, 62, 0.8);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070d1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb703;
+}
